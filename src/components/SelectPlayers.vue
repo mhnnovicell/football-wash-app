@@ -43,9 +43,9 @@ await supabase
   });
 </script>
 
-<style scoped>
+<style>
 :root {
-  --vs-selected-bg: #f0f0f0;
+  --vs-selected-bg: yellow;
   --vs-selected-color: var(--vs-colors--dark);
   --vs-selected-border-color: var(--vs-border-color);
   --vs-selected-border-style: var(--vs-border-style);
