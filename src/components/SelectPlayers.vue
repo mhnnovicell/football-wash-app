@@ -1,18 +1,20 @@
 <template>
   <div class="flex flex-col w-full h-full">
-    <div class="relative">
-      <input
-        type="search"
-        v-model="search"
-        class="w-full px-3 py-2 text-black border rounded-md outline-none focus:shadow-outline"
-        placeholder="Search..."
-      />
+    <div
+      class="z-10 relative bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+    >
       <div
         v-for="option in filteredOptions"
         :key="option"
         @click="selectOption(option)"
         class="w-full px-3 py-2 text-black border-t cursor-pointer hover:bg-gray-200"
       >
+        <input
+          type="search"
+          v-model="search"
+          class="w-full px-3 py-2 text-black border rounded-md outline-none focus:shadow-outline"
+          placeholder="Search..."
+        />
         {{ option }}
       </div>
     </div>
@@ -33,6 +35,30 @@
         </p>
       </a>
     </div>
+
+    <label
+      for="countries"
+      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      >Select an option</label
+    >
+    <select
+      id="countries"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    >
+      <input
+        type="search"
+        v-model="search"
+        class="w-full px-3 py-2 text-black border rounded-md outline-none focus:shadow-outline"
+        placeholder="Search..."
+      />
+      <option
+        @click="selectOption(option)"
+        v-for="option in filteredOptions"
+        :key="option"
+      >
+        {{ option.name }}
+      </option>
+    </select>
   </div>
 </template>
 
