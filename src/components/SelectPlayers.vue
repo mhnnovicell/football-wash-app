@@ -4,7 +4,6 @@
       <input
         type="search"
         v-model="search"
-        @input="filterOptions"
         class="w-full px-3 py-2 text-black border rounded-md outline-none focus:shadow-outline"
         placeholder="Search..."
       />
@@ -59,13 +58,7 @@ const filteredOptions = computed(() => {
   );
 });
 
-const filterOptions = () => {
-  filteredOptions.value = options.value.filter((option) =>
-    option.toLowerCase().includes(search.value.toLowerCase())
-  );
-};
-
-const selectOption = (option) => {
+const selectOption = (option: any) => {
   selectedOption.value = option;
   search.value = option;
 };
