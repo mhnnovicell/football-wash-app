@@ -1,19 +1,19 @@
 <template>
   <div class="flex flex-col w-full h-full">
-    <div class="flex flex-col w-full h-full">
-      <v-select
-        :options="data"
-        label="name"
-        v-model="selectedOption"
-        multiple
-        class="bg-white dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-      ></v-select>
+    <v-select
+      :options="data"
+      label="name"
+      v-model="selectedOption"
+      multiple
+      class="bg-white rounded-md shadow-md text-black"
+    ></v-select>
 
+    <div class="flex w-full h-full">
       <a
         v-for="(option, optionIdx) in selectedOption"
         :key="optionIdx"
         href="#"
-        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+        class="flex max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
       >
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
@@ -44,18 +44,11 @@ await supabase
 </script>
 
 <style scoped>
-.style-chooser .vs__search::placeholder,
-.style-chooser .vs__dropdown-toggle,
-.style-chooser .vs__dropdown-menu {
-  background: #dfe5fb;
-  border: none;
-  color: #394066;
-  text-transform: lowercase;
-  font-variant: small-caps;
-}
-
-.style-chooser .vs__clear,
-.style-chooser .vs__open-indicator {
-  fill: #394066;
+:root {
+  --vs-selected-bg: #f0f0f0;
+  --vs-selected-color: var(--vs-colors--dark);
+  --vs-selected-border-color: var(--vs-border-color);
+  --vs-selected-border-style: var(--vs-border-style);
+  --vs-selected-border-width: var(--vs-border-width);
 }
 </style>
