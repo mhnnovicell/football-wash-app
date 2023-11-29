@@ -6,6 +6,7 @@
         label="name"
         v-model="selectedOption"
         multiple
+        class="bg-white dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
       ></v-select>
 
       <a
@@ -19,10 +20,6 @@
         >
           {{ option.name }}
         </h5>
-        <p class="font-normal text-gray-700 dark:text-gray-400">
-          Here are the biggest enterprise technology acquisitions of 2021 so
-          far, in reverse chronological order.
-        </p>
       </a>
     </div>
   </div>
