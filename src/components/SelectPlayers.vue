@@ -8,12 +8,12 @@
       class="mb-6 text-black bg-white rounded-md shadow-md"
     ></v-select>
 
-    <div class="flex w-full h-auto" v-if="selectedOption">
+    <div class="flex flex-col w-full h-auto md:flex-row" v-if="selectedOption">
       <a
         v-for="(option, optionIdx) in selectedOption"
         :key="optionIdx"
         href="#"
-        class="flex flex-col flex-wrap max-w-sm p-6 mr-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+        class="flex flex-col flex-wrap max-w-sm p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow md:mr-6 md:mb-0 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
       >
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
