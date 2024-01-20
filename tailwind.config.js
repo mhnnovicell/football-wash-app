@@ -6,7 +6,14 @@ export default {
     './src/*.{js,ts,jsx,tsx,vue}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        'dh-screen': '100dvh',
+      },
+      width: {
+        'dw-screen': '100dvw',
+      },
+    },
   },
   plugins: [require('@tailwindcss/forms')],
 };

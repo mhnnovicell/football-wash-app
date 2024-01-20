@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full h-screen">
+  <div class="flex flex-col w-full h-full">
     <v-select
       :options="data"
       label="name"

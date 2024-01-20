@@ -2,7 +2,7 @@
   <Suspense>
     <!-- component with nested async dependencies -->
     <div
-      class="flex flex-wrap items-center justify-center h-auto p-5 font-sans md:p-28 bg-gradient-to-tr from-gray-700 via-gray-900 to-black"
+      class="flex flex-wrap items-center justify-center h-screen p-5 font-sans md:p-28 bg-gradient-to-tr from-gray-700 via-gray-900 to-black"
     >
       <SelectPlayers />
     </div>
